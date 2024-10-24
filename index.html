@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deine Website</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden; /* Verhindert Scrollen */
+            background: black;
+        }
+
+        #backgroundVideo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Deckt den gesamten Hintergrund ab */
+            z-index: -1; /* Hintergrund hinter anderen Elementen */
+        }
+
+        #navbar {
+            position: absolute;
+            top: calc(22%); /* Positionierung des Balkens */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%; /* Breite des Balkens */
+            background-color: rgba(0, 0, 0, 0.8); /* Transparente Hintergrundfarbe */
+            padding: 15px 0; /* Abstand oben und unten im Balken */
+            display: flex;
+            justify-content: space-around; /* Links gleichmäßig verteilt */
+            border-radius: 5px;
+        }
+
+        #navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px; /* Schriftgröße der Links */
+            margin: 0 10px; /* Abstand zwischen den Links */
+        }
+
+        #logo {
+            position: absolute;
+            top: calc(15%); /* Logo etwas über dem Balken */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1; /* Sicherstellen, dass das Logo über dem Balken angezeigt wird */
+        }
+
+        #textContainer {
+            position: absolute;
+            top: calc(27%); /* Abstand vom Balken */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 33%; /* Textbreite */
+            color: white;
+            text-align: center;
+            padding-top: 20px; /* Zusätzlicher Abstand über dem Text */
+            font-size: 20px; /* Schriftgröße des Textes */
+        }
+    </style>
+</head>
+<body>
+    <video id="backgroundVideo" autoplay muted loop>
+        <source src="C:\Users\gast123\Desktop\Website\Assets\Videohintergrund.mp4" type="video/mp4">
+        Dein Browser unterstützt das Videoformat nicht.
+    </video>
+
+    <div id="logo">
+        <img src="C:\Users\gast123\Desktop\Website\Assets\Otherworld.logo" alt="Logo" width="150">
+    </div>
+
+    <div id="navbar">
+        <a href="map.html">MAP</a>
+        <a href="spielen.html">SPIELEN</a>
+        <a href="glc.html">GLC</a>
+    </div>
+
+    <div id="textContainer">
+        Willkommen auf unserer Webseite! Hier können Sie durch die verschiedenen Bereiche navigieren.
+        Viel Spaß beim Erkunden unserer Inhalte.
+    </div>
+</body>
+</html>

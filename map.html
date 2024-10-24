@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAP</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden; /* Verhindert Scrollen */
+            background: black;
+        }
+
+        #navbar {
+            position: absolute;
+            top: calc(22%); /* Positionierung des Balkens */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%; /* Breite des Balkens */
+            background-color: rgba(0, 0, 0, 0.8); /* Transparente Hintergrundfarbe */
+            padding: 15px 0; /* Abstand oben und unten im Balken */
+            display: flex;
+            justify-content: space-around; /* Links gleichmäßig verteilt */
+            border-radius: 5px;
+        }
+
+        #navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px; /* Schriftgröße der Links */
+            margin: 0 10px; /* Abstand zwischen den Links */
+            padding: 10px 20px; /* Platz um die Links herum */
+        }
+
+        /* Markiere den aktiven Link (für die aktuelle Seite) */
+        #navbar a.active {
+            background-color: #555; /* Markierung für ausgewählten Button */
+            border-radius: 5px;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            padding-top: 30%;
+            font-size: 36px;
+        }
+
+    </style>
+    <script>
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                window.location.href = 'index.html'; // Zur Startseite zurückkehren
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="navbar">
+        <a href="map.html" class="active">MAP</a> <!-- MAP ist aktiv -->
+        <a href="spielen.html">SPIELEN</a>
+        <a href="glc.html">GLC</a>
+    </div>
+
+    <h1>MAP Seite</h1>
+</body>
+</html>
